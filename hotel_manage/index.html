@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>酒店管理前台</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="css/flat-ui.min.css" rel="stylesheet">
+
+    <link href="css/index.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=U1fGe9lfreG6OzmxSWv237Gf"></script>
+
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.js"></script>
+      <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="allmap" style="display:none" ></div><!-- /百度地图容器 -->
+    <div class="container">
+        <h3>XXX酒店前台</h3>
+        <!-- TODO: 图标修改 -->
+        <div class="row demo-tiles">
+
+          <div class="col-xs-3" data-toggle="modal" data-target="#modal-weather">
+            <div class="tile">
+              <img src="img/icons/svg/calendar.svg" alt="Compas" class="tile-image big-illustration">
+              <h3 class="tile-title">日期天气</h3>
+            </div>
+          </div>
+
+          <div class="col-xs-3" data-toggle="modal" data-target="#modal-check-in">
+            <div class="tile">
+              <img src="img/icons/svg/retina.svg" alt="Compas" class="tile-image big-illustration">
+              <h3 class="tile-title">入住管理</h3>
+            </div>
+          </div>
+
+          <div class="col-xs-3" data-toggle="modal" data-target="#modal-check-out">
+            <div class="tile">
+              <img src="img/icons/svg/clipboard.svg" alt="Infinity-Loop" class="tile-image big-illustration">
+              <h3 class="tile-title">退房结账</h3>
+            </div>
+          </div>
+
+          <div class="col-xs-3" data-toggle="modal" data-target="#modal-hotel-booking">
+            <div class="tile">
+              <img src="img/icons/svg/clocks.svg" alt="Pensils" class="tile-image big-illustration">
+              <h3 class="tile-title">预定管理</h3>
+            </div>
+          </div>
+
+          <div class="col-xs-3" data-toggle="modal" data-target="#modal-customer-management">
+            <div class="tile tile-hot">
+              <img src="img/icons/svg/chat.svg" alt="Chat" class="tile-image">
+              <h3 class="tile-title">客户管理</h3>
+            </div>
+          </div>
+
+          <div class="col-xs-3" data-toggle="modal" data-target="#modal-business-statistics">
+            <div class="tile tile-hot">
+              <img src="img/icons/svg/pencils.svg" alt="Chat" class="tile-image big-illustration">
+              <h3 class="tile-title">业务统计</h3>
+            </div>
+          </div>
+
+        </div> <!-- /tiles -->
+    </div>
+    <!-- /.container -->
+
+  <!-- TODO: 模态框内容编写，id修改 -->
+  <!-- 模态框（Modal） -->
+  <div class="modal fade" id="modal-weather" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+     <div class="modal-dialog">
+        <div class="modal-content">
+           <div class="modal-header">
+              <button type="button" class="close"
+                 data-dismiss="modal" aria-hidden="true">
+                    &times;
+              </button>
+              <h4 class="modal-title" id="myModalLabel">
+                 模态框（Modal）标题
+              </h4>
+           </div>
+           <div class="modal-body">
+              在这里添加一些文本
+           </div>
+           <div class="modal-footer">
+              <button type="button" class="btn btn-default"
+                 data-dismiss="modal">关闭
+              </button>
+              <button type="button" class="btn btn-primary">
+                 提交更改
+              </button>
+           </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+  </div>
+
+  <!-- 模态框（Modal） -->
+  <div class="modal fade" id="modal-check-in" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+     <div class="modal-dialog">
+        <div class="modal-content">
+           <div class="modal-header">
+              <button type="button" class="close"
+                 data-dismiss="modal" aria-hidden="true">
+                    &times;
+              </button>
+              <h4 class="modal-title" id="myModalLabel">
+                 模态框（Modal）标题
+              </h4>
+           </div>
+           <div class="modal-body">
+              在这里添加一些文本
+         </div>
+           <div class="modal-footer">
+              <button type="button" class="btn btn-default"
+                 data-dismiss="modal">关闭
+              </button>
+              <button type="button" class="btn btn-primary">
+                 提交更改
+              </button>
+           </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+  </div>
+
+  <!-- 模态框（Modal） -->
+  <div class="modal fade" id="modal-check-out" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+     <div class="modal-dialog">
+        <div class="modal-content">
+           <div class="modal-header">
+              <button type="button" class="close"
+                 data-dismiss="modal" aria-hidden="true">
+                    &times;
+              </button>
+              <h4 class="modal-title" id="myModalLabel">
+                 模态框（Modal）标题
+              </h4>
+           </div>
+           <div class="modal-body">
+              在这里添加一些文本
+           </div>
+           <div class="modal-footer">
+              <button type="button" class="btn btn-default"
+                 data-dismiss="modal">关闭
+              </button>
+              <button type="button" class="btn btn-primary">
+                 提交更改
+              </button>
+           </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+  </div>
+
+  <!-- 模态框（Modal） -->
+  <div class="modal fade" id="modal-hotel-booking" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+     <div class="modal-dialog">
+        <div class="modal-content">
+           <div class="modal-header">
+              <button type="button" class="close"
+                 data-dismiss="modal" aria-hidden="true">
+                    &times;
+              </button>
+              <h4 class="modal-title" id="myModalLabel">
+                 模态框（Modal）标题
+              </h4>
+           </div>
+           <div class="modal-body">
+              在这里添加一些文本
+           </div>
+           <div class="modal-footer">
+              <button type="button" class="btn btn-default"
+                 data-dismiss="modal">关闭
+              </button>
+              <button type="button" class="btn btn-primary">
+                 提交更改
+              </button>
+           </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+  </div>
+
+  <!-- 模态框（Modal） -->
+  <div class="modal fade" id="modal-customer-management" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+     <div class="modal-dialog">
+        <div class="modal-content">
+           <div class="modal-header">
+              <button type="button" class="close"
+                 data-dismiss="modal" aria-hidden="true">
+                    &times;
+              </button>
+              <h4 class="modal-title" id="myModalLabel">
+                 模态框（Modal）标题
+              </h4>
+           </div>
+           <div class="modal-body">
+              在这里添加一些文本
+           </div>
+           <div class="modal-footer">
+              <button type="button" class="btn btn-default"
+                 data-dismiss="modal">关闭
+              </button>
+              <button type="button" class="btn btn-primary">
+                 提交更改
+              </button>
+           </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+  </div>
+
+  <!-- 模态框（Modal） -->
+  <div class="modal fade" id="modal-business-statistics" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+     <div class="modal-dialog">
+        <div class="modal-content">
+           <div class="modal-header">
+              <button type="button" class="close"
+                 data-dismiss="modal" aria-hidden="true">
+                    &times;
+              </button>
+              <h4 class="modal-title" id="myModalLabel">
+                 模态框（Modal）标题
+              </h4>
+           </div>
+           <div class="modal-body">
+              在这里添加一些文本
+           </div>
+           <div class="modal-footer">
+              <button type="button" class="btn btn-default"
+                 data-dismiss="modal">关闭
+              </button>
+              <button type="button" class="btn btn-primary">
+                 提交更改
+              </button>
+           </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+  </div>
+
+
+
+
+    <!-- jQuery (necessary for Flat UI's JavaScript plugins) -->
+    <script src="js/vendor/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/vendor/video.js"></script>
+    <script src="js/flat-ui.min.js"></script>
+
+  </body>
+</html>
+
+<script type="text/javascript">
+
+  // TODO: 完善功能
+  // 百度地图API功能
+  var map = new BMap.Map("allmap");
+  var point = new BMap.Point(116.331398,39.897445);
+  map.centerAndZoom(point,12);
+
+  var geolocation = new BMap.Geolocation();
+  geolocation.getCurrentPosition(function(r){
+    if(this.getStatus() == BMAP_STATUS_SUCCESS){
+      var mk = new BMap.Marker(r.point);
+      map.addOverlay(mk);
+      map.panTo(r.point);
+      alert('您的位置：'+r.point.lng+','+r.point.lat);
+    }
+    else {
+      alert('failed'+this.getStatus());
+    }
+  },{enableHighAccuracy: true})
+ //关于状态码
+ //BMAP_STATUS_SUCCESS	检索成功。对应数值“0”。
+ //BMAP_STATUS_CITY_LIST	城市列表。对应数值“1”。
+ //BMAP_STATUS_UNKNOWN_LOCATION	位置结果未知。对应数值“2”。
+ //BMAP_STATUS_UNKNOWN_ROUTE	导航结果未知。对应数值“3”。
+ //BMAP_STATUS_INVALID_KEY	非法密钥。对应数值“4”。
+ //BMAP_STATUS_INVALID_REQUEST	非法请求。对应数值“5”。
+ //BMAP_STATUS_PERMISSION_DENIED	没有权限。对应数值“6”。(自 1.1 新增)
+ //BMAP_STATUS_SERVICE_UNAVAILABLE	服务不可用。对应数值“7”。(自 1.1 新增)
+ //BMAP_STATUS_TIMEOUT	超时。对应数值“8”。(自 1.1 新增)
+
+ // TODO: 获取天气，index.js
+</script>
