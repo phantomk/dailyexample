@@ -78,7 +78,7 @@
     </div>
     <!-- /.container -->
 
-  <!-- TODO: 模态框内容编写，id修改 -->
+  <!-- TODO: 模态框内容编写,天气解析，启用滚动条或者分页-->
   <!-- 模态框（Modal） -->
   <div class="modal fade" id="modal-weather" tabindex="-1" role="dialog"
      aria-labelledby="myModalLabel" aria-hidden="true">
@@ -90,11 +90,11 @@
                     &times;
               </button>
               <h4 class="modal-title" id="myModalLabel">
-                 模态框（Modal）标题
+                 杭州
               </h4>
            </div>
            <div class="modal-body">
-              在这里添加一些文本
+              天气解析
            </div>
            <div class="modal-footer">
               <button type="button" class="btn btn-default"
@@ -111,25 +111,77 @@
   <!-- 模态框（Modal） -->
   <div class="modal fade" id="modal-check-in" tabindex="-1" role="dialog"
      aria-labelledby="myModalLabel" aria-hidden="true">
-     <div class="modal-dialog">
+     <div class="modal-dialog modal-lg">
         <div class="modal-content">
-           <div class="modal-header">
+           <!-- <div class="modal-header">
               <button type="button" class="close"
                  data-dismiss="modal" aria-hidden="true">
                     &times;
               </button>
-              <h4 class="modal-title" id="myModalLabel">
-                 模态框（Modal）标题
-              </h4>
-           </div>
+              <h5 class="modal-title" id="myModalLabel">
+                 入住管理
+              </h5>
+           </div> -->
            <div class="modal-body">
-              在这里添加一些文本
-         </div>
+            <!-- TODO: 对齐 -->
+             <div class="row">
+               <div class="col-xs-5">
+                 <div class="thumbnail">
+                  <img src="img/identity-card.jpg" alt="Responsive image" class="img-rounded">
+                 </div>
+                 <form>
+                   <div class="form-group">
+                     <label for="exampleInputEmail1">姓名</label>
+                     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="姓名">
+                   </div>
+                   <label class="radio-inline">
+                     <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 男士
+                   </label>
+                   <label class="radio-inline">
+                     <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 女士
+                   </label>
+                 </from>
+               </div>
+               <div class="col-xs-7">
+                <form>
+
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">手机号</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="手机号">
+                  </div>
+                  <!-- TODO: 房间号改为空房可选列表 -->
+                  <!-- TODO: 日期选择器 -->
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">房间号</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="房间号">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">个人信息</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="个人信息">
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <div class="form-group">
+                      <label for="exampleInputEmail1">入住时间</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="入住时间">
+                      </div>
+                    </div>
+                    <div class="col-xs-6">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">退房时间</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="入住时间">
+                      </div>
+                    </div>
+                </div>
+                </form>
+               </div>
+             </div>
+           </div>
            <div class="modal-footer">
-              <button type="button" class="btn btn-default"
+              <button type="button" class="btn btn-default btn-sm"
                  data-dismiss="modal">关闭
               </button>
-              <button type="button" class="btn btn-primary">
+              <button type="button" class="btn btn-primary btn-sm">
                  提交更改
               </button>
            </div>
@@ -140,9 +192,9 @@
   <!-- 模态框（Modal） -->
   <div class="modal fade" id="modal-check-out" tabindex="-1" role="dialog"
      aria-labelledby="myModalLabel" aria-hidden="true">
-     <div class="modal-dialog">
+     <div class="modal-dialog modal-lg">
         <div class="modal-content">
-           <div class="modal-header">
+           <!-- <div class="modal-header">
               <button type="button" class="close"
                  data-dismiss="modal" aria-hidden="true">
                     &times;
@@ -150,9 +202,9 @@
               <h4 class="modal-title" id="myModalLabel">
                  模态框（Modal）标题
               </h4>
-           </div>
+           </div> -->
            <div class="modal-body">
-              在这里添加一些文本
+              xxxxx
            </div>
            <div class="modal-footer">
               <button type="button" class="btn btn-default"
@@ -166,12 +218,13 @@
     </div><!-- /.modal -->
   </div>
 
+  <!-- TODO: giyphs图标更改 -->
   <!-- 模态框（Modal） -->
   <div class="modal fade" id="modal-hotel-booking" tabindex="-1" role="dialog"
      aria-labelledby="myModalLabel" aria-hidden="true">
-     <div class="modal-dialog">
+     <div class="modal-dialog modal-lg">
         <div class="modal-content">
-           <div class="modal-header">
+           <!-- <div class="modal-header">
               <button type="button" class="close"
                  data-dismiss="modal" aria-hidden="true">
                     &times;
@@ -179,9 +232,37 @@
               <h4 class="modal-title" id="myModalLabel">
                  模态框（Modal）标题
               </h4>
-           </div>
+           </div> -->
            <div class="modal-body">
-              在这里添加一些文本
+             <table class="table table-striped table-hover">
+               <tr>
+                 <td>编号</td>
+                 <td>姓名</td>
+                 <td>手机号</td>
+                 <td>入住时间</td>
+                 <td>预订房间</td>
+                 <td>预订时间</td>
+                 <td>操作</td>
+               </tr>
+               <tr>
+                 <td>1</td>
+                 <td>kio</td>
+                 <td>18079771145</td>
+                 <td>2015-11-25</td>
+                 <td>309</td>
+                 <td>2015-11-20</td>
+                 <td><div class="col-lg-5"><span class="form-control-feedback fui-check"></span></td>
+               </tr>
+               <tr>
+                 <td>2</td>
+                 <td>phantomk</td>
+                 <td>18069771145</td>
+                 <td>2015-12-01</td>
+                 <td>308</td>
+                 <td>2015-11-24</td>
+                 <td>xxxxx</td>
+               </tr>
+             </table>
            </div>
            <div class="modal-footer">
               <button type="button" class="btn btn-default"
@@ -198,9 +279,9 @@
   <!-- 模态框（Modal） -->
   <div class="modal fade" id="modal-customer-management" tabindex="-1" role="dialog"
      aria-labelledby="myModalLabel" aria-hidden="true">
-     <div class="modal-dialog">
+     <div class="modal-dialog modal-lg">
         <div class="modal-content">
-           <div class="modal-header">
+           <!-- <div class="modal-header">
               <button type="button" class="close"
                  data-dismiss="modal" aria-hidden="true">
                     &times;
@@ -208,9 +289,34 @@
               <h4 class="modal-title" id="myModalLabel">
                  模态框（Modal）标题
               </h4>
-           </div>
+           </div> -->
            <div class="modal-body">
-              在这里添加一些文本
+             <table class="table table-striped table-hover">
+               <tr>
+                 <td>编号</td>
+                 <td>姓名</td>
+                 <td>性别</td>
+                 <td>客户类型</td>
+                 <td>客户信息</td>
+                 <td>其他</td>
+               </tr>
+               <tr>
+                 <td>1</td>
+                 <td>kio</td>
+                 <td>男</td>
+                 <td>vip</td>
+                 <td>xxxxx</td>
+                 <td>xxxxx</td>
+               </tr>
+               <tr>
+                 <td>2</td>
+                 <td>phantomk</td>
+                 <td>男</td>
+                 <td>svip</td>
+                 <td>xxxxx</td>
+                 <td>xxxxx</td>
+               </tr>
+             </table>
            </div>
            <div class="modal-footer">
               <button type="button" class="btn btn-default"
@@ -227,9 +333,9 @@
   <!-- 模态框（Modal） -->
   <div class="modal fade" id="modal-business-statistics" tabindex="-1" role="dialog"
      aria-labelledby="myModalLabel" aria-hidden="true">
-     <div class="modal-dialog">
+     <div class="modal-dialog modal-lg">
         <div class="modal-content">
-           <div class="modal-header">
+           <!-- <div class="modal-header">
               <button type="button" class="close"
                  data-dismiss="modal" aria-hidden="true">
                     &times;
@@ -237,9 +343,9 @@
               <h4 class="modal-title" id="myModalLabel">
                  模态框（Modal）标题
               </h4>
-           </div>
+           </div> -->
            <div class="modal-body">
-              在这里添加一些文本
+
            </div>
            <div class="modal-footer">
               <button type="button" class="btn btn-default"
