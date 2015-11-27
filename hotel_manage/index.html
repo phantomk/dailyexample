@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+
     <title>酒店管理前台</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -402,5 +403,10 @@
  //BMAP_STATUS_SERVICE_UNAVAILABLE	服务不可用。对应数值“7”。(自 1.1 新增)
  //BMAP_STATUS_TIMEOUT	超时。对应数值“8”。(自 1.1 新增)
 
- // TODO: 获取天气，index.js
+ // TODO: 获取天气，index.js,解决跨域请求问题
+  var xmlhttp = new XMLHttpRequest();
+  var weather_json = xmlhttp.open("GET","http://api.map.baidu.com/telematics/v3/weather?location=%E6%9D%AD%E5%B7%9E&output=json&ak=U1fGe9lfreG6OzmxSWv237Gf",true);
+  xmlhttp.send(null);
+  alert(weather_json);
+
 </script>
