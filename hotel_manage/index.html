@@ -14,13 +14,11 @@
 
     <link href="css/index.css" rel="stylesheet">
 
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+
     <link rel="shortcut icon" href="img/favicon.ico">
 
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=U1fGe9lfreG6OzmxSWv237Gf"></script>
-
-    <script type="text/javascript" src="js/index.js"></script>
-
-    <script type="text/javascript" src="js/Chart.min.js"></script>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
     <!--[if lt IE 9]>
@@ -125,7 +123,7 @@
               </h5>
            </div> -->
            <div class="modal-body">
-            <!-- TODO: 对齐 -->
+            <!-- TODO: 对齐,id名修改-->
              <div class="row">
                <div class="col-xs-5">
                  <div class="thumbnail">
@@ -165,13 +163,13 @@
                     <div class="col-xs-6">
                       <div class="form-group">
                       <label for="exampleInputEmail1">入住时间</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="入住时间">
+                      <input type="email" class="form-control" id="modal-check-in-in-datetimepicker" placeholder="入住时间">
                       </div>
                     </div>
                     <div class="col-xs-6">
                       <div class="form-group">
                         <label for="exampleInputEmail1">退房时间</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="入住时间">
+                        <input type="email" class="form-control" id="modal-check-in-out-datetimepicker" placeholder="入住时间">
                       </div>
                     </div>
                 </div>
@@ -230,13 +228,13 @@
                      <div class="col-xs-6">
                        <div class="form-group">
                        <label for="exampleInputEmail1">入住时间</label>
-                       <input type="email" class="form-control" id="exampleInputEmail1" placeholder="入住时间">
+                       <input type="email" class="form-control" id="modal-check-out-in-datetimepicker" placeholder="入住时间">
                        </div>
                      </div>
                      <div class="col-xs-6">
                        <div class="form-group">
                          <label for="exampleInputEmail1">退房时间</label>
-                         <input type="email" class="form-control" id="exampleInputEmail1" placeholder="入住时间">
+                         <input type="email" class="form-control" id="modal-check-out-out-datetimepicker" placeholder="入住时间">
                        </div>
                      </div>
                    </div>
@@ -414,98 +412,9 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/vendor/video.js"></script>
     <script src="js/flat-ui.min.js"></script>
+    <script type="text/javascript" src="js/Chart.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
 
   </body>
 </html>
-
-<script type="text/javascript">
-
-  // TODO: 完善功能
-  // 百度地图API功能
-  var map = new BMap.Map("allmap");
-  var point = new BMap.Point(116.331398,39.897445);
-  map.centerAndZoom(point,12);
-
-  var geolocation = new BMap.Geolocation();
-  geolocation.getCurrentPosition(function(r){
-    if(this.getStatus() == BMAP_STATUS_SUCCESS){
-      var mk = new BMap.Marker(r.point);
-      map.addOverlay(mk);
-      map.panTo(r.point);
-      alert('您的位置：'+r.point.lng+','+r.point.lat);
-    }
-    else {
-      alert('failed'+this.getStatus());
-    }
-  },{enableHighAccuracy: true})
- //关于状态码
- //BMAP_STATUS_SUCCESS	检索成功。对应数值“0”。
- //BMAP_STATUS_CITY_LIST	城市列表。对应数值“1”。
- //BMAP_STATUS_UNKNOWN_LOCATION	位置结果未知。对应数值“2”。
- //BMAP_STATUS_UNKNOWN_ROUTE	导航结果未知。对应数值“3”。
- //BMAP_STATUS_INVALID_KEY	非法密钥。对应数值“4”。
- //BMAP_STATUS_INVALID_REQUEST	非法请求。对应数值“5”。
- //BMAP_STATUS_PERMISSION_DENIED	没有权限。对应数值“6”。(自 1.1 新增)
- //BMAP_STATUS_SERVICE_UNAVAILABLE	服务不可用。对应数值“7”。(自 1.1 新增)
- //BMAP_STATUS_TIMEOUT	超时。对应数值“8”。(自 1.1 新增)
-
- // TODO: 获取天气，index.js,解决跨域请求问题
-  var xmlhttp = new XMLHttpRequest();
-  var weather_json = xmlhttp.open("GET","http://api.map.baidu.com/telematics/v3/weather?location=%E6%9D%AD%E5%B7%9E&output=json&ak=U1fGe9lfreG6OzmxSWv237Gf",true);
-  xmlhttp.send(null);
-  alert(weather_json);
-
-</script>
-
-<script>
-
-  var doughnutData = [
-      {
-        value: 300,
-        color:"#F7464A",
-        highlight: "#FF5A5E",
-        label: "Red"
-      },
-      {
-        value: 50,
-        color: "#46BFBD",
-        highlight: "#5AD3D1",
-        label: "Green"
-      },
-      {
-        value: 100,
-        color: "#FDB45C",
-        highlight: "#FFC870",
-        label: "Yellow"
-      },
-      {
-        value: 40,
-        color: "#949FB1",
-        highlight: "#A8B3C5",
-        label: "Grey"
-      },
-      {
-        value: 120,
-        color: "#4D5360",
-        highlight: "#616774",
-        label: "Dark Grey"
-      }
-
-    ];
-
-    // window.onload = function(){
-    //   //var ctx = document.getElementById("chart-area").getContext("2d");
-    //   window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {responsive : true});
-    // };
-
-    // TODO: 无法在模态框中显示
-    $('#business-statistics').on('click',function(){
-      //$('#myModal').modal();
-      $('#modal-business-statistics').modal('show');
-      var ctx = document.getElementById("chart-area").getContext("2d");
-      window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {responsive : true});
-    });
-
-
-
-</script>
