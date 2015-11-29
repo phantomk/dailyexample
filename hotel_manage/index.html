@@ -20,6 +20,8 @@
 
     <script type="text/javascript" src="js/index.js"></script>
 
+    <script type="text/javascript" src="js/Chart.min.js"></script>
+
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
     <!--[if lt IE 9]>
       <script src="js/vendor/html5shiv.js"></script>
@@ -30,7 +32,6 @@
     <div id="allmap" style="display:none" ></div><!-- /百度地图容器 -->
     <div class="container">
         <h3>XXX酒店前台</h3>
-        <!-- TODO: 图标修改 -->
         <div class="row demo-tiles">
 
           <div class="col-xs-3" data-toggle="modal" data-target="#modal-weather">
@@ -68,7 +69,7 @@
             </div>
           </div>
 
-          <div class="col-xs-3" data-toggle="modal" data-target="#modal-business-statistics">
+          <div class="col-xs-3" id="business-statistics" >
             <div class="tile tile-hot">
               <img src="img/icons/svg/pencils.svg" alt="Chat" class="tile-image big-illustration">
               <h3 class="tile-title">业务统计</h3>
@@ -382,7 +383,16 @@
               </h4>
            </div> -->
            <div class="modal-body">
+            <div class="row">
+              <div class="col-xs-6">
+                <div id="canvas-holder">
+            			  <canvas id="chart-area" width="50" height="50"/>
+            		 </div>
 
+              </div>
+              <div class="col-xs-6">
+              </div>
+            </div>
            </div>
            <div class="modal-footer">
               <button type="button" class="btn btn-default"
@@ -444,5 +454,58 @@
   var weather_json = xmlhttp.open("GET","http://api.map.baidu.com/telematics/v3/weather?location=%E6%9D%AD%E5%B7%9E&output=json&ak=U1fGe9lfreG6OzmxSWv237Gf",true);
   xmlhttp.send(null);
   alert(weather_json);
+
+</script>
+
+<script>
+
+  var doughnutData = [
+      {
+        value: 300,
+        color:"#F7464A",
+        highlight: "#FF5A5E",
+        label: "Red"
+      },
+      {
+        value: 50,
+        color: "#46BFBD",
+        highlight: "#5AD3D1",
+        label: "Green"
+      },
+      {
+        value: 100,
+        color: "#FDB45C",
+        highlight: "#FFC870",
+        label: "Yellow"
+      },
+      {
+        value: 40,
+        color: "#949FB1",
+        highlight: "#A8B3C5",
+        label: "Grey"
+      },
+      {
+        value: 120,
+        color: "#4D5360",
+        highlight: "#616774",
+        label: "Dark Grey"
+      }
+
+    ];
+
+    // window.onload = function(){
+    //   //var ctx = document.getElementById("chart-area").getContext("2d");
+    //   window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {responsive : true});
+    // };
+
+    // TODO: 无法在模态框中显示
+    $('#business-statistics').on('click',function(){
+      //$('#myModal').modal();
+      $('#modal-business-statistics').modal('show');
+      var ctx = document.getElementById("chart-area").getContext("2d");
+      window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {responsive : true});
+    });
+
+
 
 </script>

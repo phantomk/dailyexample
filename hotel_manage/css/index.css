@@ -355,3 +355,7 @@ ol.linenums {
   width: 140px;
   margin-left: 20px;
   }
+
+#canvas-holder{
+    width:30%;
+  }
