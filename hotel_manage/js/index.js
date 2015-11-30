@@ -106,3 +106,48 @@
    $('#modal-check-out-out-datetimepicker').datetimepicker({
      format: 'yyyy-mm-dd hh:ii'
    });
+
+// TODO: 输入校验
+  $('#modal-check-in-submit').on('click', function(){
+    if ($('#modal-check-in-name').val() == ""){
+      alert("输入姓名");
+    }
+    if ($('#modal-check-in-tel').val() == ""){
+      var tel = $('#modal-check-in-tel').val();
+      var pattern = /^1[34578]\d{9}$/;
+      if (pattern.test(tel)) {
+        alert("输入正确手机号");
+      }
+    }
+    if ($('#modal-check-in-room').val() == ""){
+      alert("选择房间号");
+    }
+    if ($('#modal-check-in-in-datetimepicker').val() == ""){
+      alert("选择入住时间");
+    }
+    if ($('#modal-check-in-out-datetimepicker').val() == ""){
+      alert("选择退房时间");
+    }
+  });
+
+  $('#modal-check-out-submit').on('click', function(){
+    if ($('#modal-check-out-name').val() == ""){
+      alert("输入姓名");
+    }
+    if ($('#modal-check-out-tel').val() == ""){
+      var tel = $('#modal-check-out-tel').val();
+      var pattern = /^1[34578]\d{9}$/;
+      if (pattern.test(tel)) {
+        alert("输入正确手机号");
+      }
+    }
+    if ($('#modal-check-out-room').val() == ""){
+      alert("选择房间号");
+    }
+    if ($('#modal-check-out-in-datetimepicker').val() == ""){
+      alert("选择入住时间");
+    }
+    if ($('#modal-check-out-out-datetimepicker').val() == ""){
+      alert("选择退房时间");
+    }
+  });
