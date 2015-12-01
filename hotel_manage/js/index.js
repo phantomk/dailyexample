@@ -109,16 +109,21 @@
 /**
  * 输入校验
  */
-// TODO: 输入校验
+// TODO: 输入校验,关闭后输入信息是否清空
   $('#modal-check-in-submit').on('click', function(){
-    var state = true;
-      if (!state){
+    var state = false;
+    if (!state){
       if ($('#modal-check-in-name').val() == ""){
         alert("输入姓名");
         state = false;
         return;
       }
+
       if ($('#modal-check-in-tel').val() == ""){
+        alert("输入手机号");
+        state = false;
+        return;
+      }else if (true) {
         var tel = $('#modal-check-in-tel').val();
         var pattern = /^1[34578]\d{9}$/;
         if (!pattern.test(tel)) {
@@ -127,16 +132,19 @@
           return;
         }
       }
+
       if ($('#modal-check-in-room').val() == ""){
         alert("选择房间号");
         state = false;
         return;
       }
+
       if ($('#modal-check-in-in-datetimepicker').val() == ""){
         alert("选择入住时间");
         state = false;
         return;
       }
+
       if ($('#modal-check-in-out-datetimepicker').val() == ""){
         alert("选择退房时间");
         state = false;
@@ -146,14 +154,19 @@
   });
 
   $('#modal-check-out-submit').on('click', function(){
-    var state = true;
+    var state = false;
     if (!state){
       if ($('#modal-check-out-name').val() == ""){
         alert("输入姓名");
         state = false;
         return;
       }
+
       if ($('#modal-check-out-tel').val() == ""){
+        alert("输入手机号");
+        state = false;
+        return;
+      }else if (true) {
         var tel = $('#modal-check-out-tel').val();
         var pattern = /^1[34578]\d{9}$/;
         if (!pattern.test(tel)) {
@@ -162,16 +175,19 @@
           return;
         }
       }
+
       if ($('#modal-check-out-room').val() == ""){
         alert("选择房间号");
         state = false;
         return;
       }
+
       if ($('#modal-check-out-in-datetimepicker').val() == ""){
         alert("选择入住时间");
         state = false;
         return;
       }
+
       if ($('#modal-check-out-out-datetimepicker').val() == ""){
         alert("选择退房时间");
         state = false;
