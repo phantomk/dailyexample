@@ -86,6 +86,8 @@
        $('#modal-business-statistics').modal('show');
        var ctx = document.getElementById("chart-area").getContext("2d");
        window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {responsive : true});
+       var html = $('#canvas-holder');
+       $('#chart-1').html(html);
      });
 
 
