@@ -75,7 +75,10 @@
           </div>
 
           <div id="canvas-holder">
-              <canvas id="chart-area" width="50" height="50"/>
+              <canvas id="chart-area-doughnut" width="50" height="50"/>
+              <canvas id="chart-area-polar-area" width="50" height="50"/>
+              <canvas id="chart-area-radar" width="50" height="50"/>
+              <canvas id="chart-area-bar" width="50" height="50"/>
           </div>
 
         </div> <!-- /tiles -->
@@ -112,7 +115,7 @@
     </div><!-- /.modal -->
   </div>
 
-  <!-- 模态框（Modal） -->
+  <!-- 入住管理-模态框（Modal） -->
   <div class="modal fade" id="modal-check-in" tabindex="-1" role="dialog"
      aria-labelledby="myModalLabel" aria-hidden="true">
      <div class="modal-dialog modal-lg">
@@ -193,7 +196,7 @@
     </div><!-- /.modal -->
   </div>
 
-  <!-- 模态框（Modal） -->
+  <!-- 退房结账-模态框（Modal） -->
   <div class="modal fade" id="modal-check-out" tabindex="-1" role="dialog"
      aria-labelledby="myModalLabel" aria-hidden="true">
      <div class="modal-dialog modal-lg">
@@ -259,7 +262,7 @@
   </div>
 
   <!-- TODO: giyphs图标更改 -->
-  <!-- 模态框（Modal） -->
+  <!-- 预定管理-模态框（Modal） -->
   <div class="modal fade" id="modal-hotel-booking" tabindex="-1" role="dialog"
      aria-labelledby="myModalLabel" aria-hidden="true">
      <div class="modal-dialog modal-lg">
@@ -316,7 +319,7 @@
     </div><!-- /.modal -->
   </div>
 
-  <!-- 模态框（Modal） -->
+  <!-- 客户管理-模态框（Modal） -->
   <div class="modal fade" id="modal-customer-management" tabindex="-1" role="dialog"
      aria-labelledby="myModalLabel" aria-hidden="true">
      <div class="modal-dialog modal-lg">
@@ -370,7 +373,7 @@
     </div><!-- /.modal -->
   </div>
 
-  <!-- 模态框（Modal） -->
+  <!-- 业务统计模态框（Modal） -->
   <div class="modal fade" id="modal-business-statistics" tabindex="-1" role="dialog"
      aria-labelledby="myModalLabel" aria-hidden="true">
      <div class="modal-dialog modal-lg">
@@ -384,12 +387,15 @@
                  模态框（Modal）标题
               </h4>
            </div> -->
-           <div class="modal-body">
+           <div class="modal-body" >
             <div class="row">
-              <div class="col-xs-6" id = "chart-1">
-
+              <div class="col-xs-6" id = "modal-chart-area-doughnut">
               </div>
-              <div class="col-xs-6">
+              <div class="col-xs-6" id = "modal-chart-area-polar-area">
+              </div>
+              <div class="col-xs-6" id = "modal-chart-area-radar">
+              </div>
+              <div class="col-xs-6" id = "modal-chart-area-bar">
               </div>
             </div>
            </div>
