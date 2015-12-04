@@ -183,17 +183,26 @@ $('#business-statistics').on('click', function() {
  * @param  {[type]} '#modal-check-in-in-datetimepicker' [description]
  * @return {[type]}                                     [description]
  */
+// TODO: 修改类名，通过子类统一
 $('#modal-check-in-in-datetimepicker').datetimepicker({
-  format: 'yyyy-mm-dd hh:ii'
+  format: 'yyyy-mm-dd hh:ii',
+  language:  'zh-CN',
+  pickerPosition: 'top-right',
 });
 $('#modal-check-in-out-datetimepicker').datetimepicker({
-  format: 'yyyy-mm-dd hh:ii'
+  format: 'yyyy-mm-dd hh:ii',
+  language:  'zh-CN',
+  pickerPosition: 'top-right',
 });
 $('#modal-check-out-in-datetimepicker').datetimepicker({
-  format: 'yyyy-mm-dd hh:ii'
+  format: 'yyyy-mm-dd hh:ii',
+  language:  'zh-CN',
+  pickerPosition: 'top-right',
 });
 $('#modal-check-out-out-datetimepicker').datetimepicker({
-  format: 'yyyy-mm-dd hh:ii'
+  format: 'yyyy-mm-dd hh:ii',
+  language:  'zh-CN',
+  pickerPosition: 'top-right',
 });
 /**
  * 输入校验
