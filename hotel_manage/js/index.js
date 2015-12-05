@@ -173,8 +173,8 @@ $('#business-statistics').on('click', function() {
     responsive : true
   });
 
-  //var html = $('#canvas-holder');
-  //$('#modal-chart-area-doughnut').html(html);
+  var html = $('#canvas-holder');
+  $('#modal-chart-area-doughnut').html(html);
 });
 
 
