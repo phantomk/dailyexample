@@ -160,7 +160,13 @@
                   <!-- TODO: 日期选择器 -->
                   <div class="form-group">
                     <label for="modal-check-in-room">房间号</label>
-                    <input type="text" class="form-control" id="modal-check-in-room" placeholder="房间号">
+                    <input type="text" class="form-control" list="room-list" id="modal-check-in-room" placeholder="房间号">
+                      <datalist id="room-list">
+                        <option value="309" />
+                        <option value="308" />
+                        <option value="401" />
+                      </datalist>
+                    </input>
                   </div>
                   <div class="form-group">
                     <label for="modal-check-in-personal">个人信息</label>
