@@ -152,6 +152,8 @@ var barChartData = {
 
 // TODO: 无法在模态框中显示
 $('#business-statistics').on('click', function() {
+
+  var canvas_holder_html = $('#canvas-holder').html();
   //$('#myModal').modal();
   $('#modal-business-statistics').modal('show');
   var ctx = document.getElementById("chart-area-doughnut").getContext("2d");
@@ -173,6 +175,8 @@ $('#business-statistics').on('click', function() {
     responsive : true
   });
 
+
+
   var html = $('#chart-area-doughnut');
   $('#modal-chart-area-doughnut').html(html);
 
@@ -184,6 +188,8 @@ $('#business-statistics').on('click', function() {
 
   html = $('#chart-area-bar');
   $('#modal-chart-area-bar').html(html);
+
+  $('#canvas-holder').html(canvas_holder_html);
 });
 
 
