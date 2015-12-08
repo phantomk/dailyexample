@@ -154,7 +154,6 @@ var barChartData = {
 $('#business-statistics').on('click', function() {
 
   var canvas_holder_html = $('#canvas-holder').html();
-  //$('#myModal').modal();
   $('#modal-business-statistics').modal('show');
   var ctx = document.getElementById("chart-area-doughnut").getContext("2d");
   window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {
