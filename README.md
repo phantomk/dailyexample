@@ -1,2 +1,2 @@
-# dailyexample
+# some_demos
 some demos
