@@ -1,0 +1,1 @@
+learn node by [*\< The Node Beginner Book\>*](http://www.nodebeginner.org/)
