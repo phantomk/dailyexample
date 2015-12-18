@@ -1,0 +1,16 @@
+{
+  "name": "lesson7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha-phantomjs vendor/index.html --ssl-protocol=any --ignore-ssl-errors=true"
+  },
+  "author": "phantomk",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4",
+    "mocha-phantomjs": "^4.0.1"
+  }
+}
