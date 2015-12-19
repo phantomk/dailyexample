@@ -1,0 +1,14 @@
+{
+  "name": "lesson10",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "phantomk",
+  "license": "MIT",
+  "devDependencies": {
+    "benchmark": "^1.0.0"
+  }
+}
