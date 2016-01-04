@@ -199,24 +199,32 @@ $('#business-statistics').on('click', function() {
  */
 // TODO: 修改类名，通过子类统一
 $('#modal-check-in-in-datetimepicker').datetimepicker({
-  format: 'yyyy-mm-dd hh:ii',
+  format: 'yyyy-mm-dd',
   language:  'zh-CN',
   pickerPosition: 'top-right',
+  autoclose: 'true',
+  minView: '2'
 });
 $('#modal-check-in-out-datetimepicker').datetimepicker({
-  format: 'yyyy-mm-dd hh:ii',
+  format: 'yyyy-mm-dd',
   language:  'zh-CN',
   pickerPosition: 'top-right',
+  autoclose: 'true',
+  minView: '2'
 });
 $('#modal-check-out-in-datetimepicker').datetimepicker({
-  format: 'yyyy-mm-dd hh:ii',
+  format: 'yyyy-mm-dd',
   language:  'zh-CN',
   pickerPosition: 'top-right',
+  autoclose: 'true',
+  minView: '2'
 });
 $('#modal-check-out-out-datetimepicker').datetimepicker({
-  format: 'yyyy-mm-dd hh:ii',
+  format: 'yyyy-mm-dd',
   language:  'zh-CN',
   pickerPosition: 'top-right',
+  autoclose: 'true',
+  minView: '2'
 });
 /**
  * 输入校验
