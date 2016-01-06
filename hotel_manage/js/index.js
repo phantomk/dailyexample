@@ -212,20 +212,6 @@ $('#modal-check-in-out-datetimepicker').datetimepicker({
   autoclose: 'true',
   minView: '2'
 });
-$('#modal-check-out-in-datetimepicker').datetimepicker({
-  format: 'yyyy-mm-dd',
-  language:  'zh-CN',
-  pickerPosition: 'top-right',
-  autoclose: 'true',
-  minView: '2'
-});
-$('#modal-check-out-out-datetimepicker').datetimepicker({
-  format: 'yyyy-mm-dd',
-  language:  'zh-CN',
-  pickerPosition: 'top-right',
-  autoclose: 'true',
-  minView: '2'
-});
 /**
  * 输入校验
  */
@@ -266,49 +252,6 @@ $('#modal-check-in-submit').on('click', function() {
     }
 
     if ($('#modal-check-in-out-datetimepicker').val() == "") {
-      alert("选择退房时间");
-      state = false;
-      return;
-    }
-  }
-});
-
-$('#modal-check-out-submit').on('click', function() {
-  var state = false;
-  if (!state) {
-    if ($('#modal-check-out-name').val() == "") {
-      alert("输入姓名");
-      state = false;
-      return;
-    }
-
-    if ($('#modal-check-out-tel').val() == "") {
-      alert("输入手机号");
-      state = false;
-      return;
-    } else if (true) {
-      var tel = $('#modal-check-out-tel').val();
-      var pattern = /^1[34578]\d{9}$/;
-      if (!pattern.test(tel)) {
-        alert("输入正确手机号");
-        state = false;
-        return;
-      }
-    }
-
-    if ($('#modal-check-out-room').val() == "") {
-      alert("选择房间号");
-      state = false;
-      return;
-    }
-
-    if ($('#modal-check-out-in-datetimepicker').val() == "") {
-      alert("选择入住时间");
-      state = false;
-      return;
-    }
-
-    if ($('#modal-check-out-out-datetimepicker').val() == "") {
       alert("选择退房时间");
       state = false;
       return;
