@@ -203,7 +203,7 @@
   <!-- 退房结账-模态框（Modal） -->
   <div class="modal fade" id="modal-check-out" tabindex="-1" role="dialog"
      aria-labelledby="myModalLabel" aria-hidden="true">
-     <div class="modal-dialog modal-lg">
+     <div class="modal-dialog">
         <div class="modal-content">
            <div class="modal-header">
               <button type="button" class="close"
@@ -214,40 +214,54 @@
            </div>
            <!-- TODO: 其他选项 -->
            <div class="modal-body">
+             <div class="row">
+                <div class="col-xs-6 col-xs-offset-3">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="输入手机号...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">搜索</button>
+                    </span>
+                </div><!-- /input-group -->
+                </div>
+             </div>
+              <div class="row"></br></div>
+             <div class="row">
+               <div class="col-xs-12">
+                <table class="table table-striped table-hover table-bordered">
+                    <tr>
+                        <td>姓名</td>
+                        <td>手机号</td>
+                        <td>入住时间</td>
+                        <td>房间号码</td>
+                    </tr>
+                    <tr>
+                        <td>kio</td>
+                        <td>18079771145</td>
+                        <td>2015-11-25</td>
+                        <td>309</td>
+                    </tr>
+                </table>
+               </div>
+             </div>
             <div class="row">
               <div class="col-xs-6">
                  <form>
                    <div class="form-group">
-                     <label for="modal-check-out-name">姓名</label>
-                     <input type="text" class="form-control" id="modal-check-out-name" placeholder="姓名">
-                   </div>
+                      <label for="modal-check-out-days">天数</label>
+                      <input type="text" class="form-control" id="modal-check-out-days" placeholder="天数">
+                   </div>      
+                </form>
+               </div>
+               <div class="col-xs-6">
+                 <form>    
                    <div class="form-group">
-                     <label for="modal-check-out-tel">手机号</label>
-                     <input type="text" class="form-control" id="modal-check-out-tel" placeholder="手机号">
-                   </div>
-                   <div class="form-group">
-                     <label for="modal-check-out-room">房间号</label>
-                     <input type="text" class="form-control" id="modal-check-out-room" placeholder="房间号">
-                   </div>
-                   <div class="form-group">
-                     <label for="modal-check-out-personal">个人信息</label>
-                     <input type="text" class="form-control" id="modal-check-out-personal" placeholder="个人信息">
-                   </div>
-                   <div class="row">
-                     <div class="col-xs-6">
-                       <div class="form-group">
-                       <label for="modal-check-out-in-datetimepicker">入住时间</label>
-                       <input type="text" class="form-control" id="modal-check-out-in-datetimepicker" placeholder="入住时间">
-                       </div>
-                     </div>
-                     <div class="col-xs-6">
-                       <div class="form-group">
-                         <label for="modal-check-out-out-datetimepicker">退房时间</label>
-                         <input type="text" class="form-control" id="modal-check-out-out-datetimepicker" placeholder="入住时间">
-                       </div>
-                     </div>
-                   </div>
-                 </form>
+                      <label for="modal-check-out-price">总消费</label>
+                      <div class="input-group">
+                          <input type="text" class="form-control" placeholder="总消费" id="modal-check-out-price" aria-describedby="modal-check-out-addon2">
+                          <span class="input-group-addon" id="modal-check-out-addon2">元</span>
+                      </div>
+                   </div>      
+                </form>
                </div>
              </div>
            </div>
@@ -256,7 +270,7 @@
                  data-dismiss="modal">关闭
               </button>
               <button type="button" class="btn btn-primary" id="modal-check-out-submit">
-                 提交更改
+                 结算
               </button>
            </div>
         </div><!-- /.modal-content -->
